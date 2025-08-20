@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TabNews Newsletter
 
-## Getting Started
+Este projeto é uma aplicação web construída com **Next.js** e **Tailwind CSS** que atua como uma newsletter dinâmica, consumindo a API pública do TabNews para exibir e filtrar conteúdos.
 
-First, run the development server:
+A aplicação foi desenvolvida como um MVP (Mínimo Produto Viável) para demonstrar a busca de dados do lado do servidor (Server Components) e a interatividade do lado do cliente (Client Components) com React.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tecnologias
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Next.js 14+**: Framework React para aplicações com renderização do lado do servidor e estática.
+- **Tailwind CSS**: Framework CSS utilitário para estilização rápida e responsiva.
+- **TypeScript**: Linguagem para tipagem estática.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Como Executar o Projeto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Para rodar a aplicação localmente, siga os seguintes passos:
 
-## Learn More
+1.  Clone este repositório:
+    ```bash
+    git clone [https://www.dio.me/articles/enviando-seu-projeto-para-o-github](https://www.dio.me/articles/enviando-seu-projeto-para-o-github)
+    ```
+2.  Navegue até o diretório do projeto:
+    ```bash
+    cd tabnews-newsletter
+    ```
+3.  Instale as dependências:
+    ```bash
+    npm install
+    ```
+4.  Inicie o servidor de desenvolvimento:
+    ```bash
+    npm run dev
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+A aplicação estará disponível em `http://localhost:3000`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Funcionalidades Atuais
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Busca Dinâmica**: Uma barra de pesquisa permite ao usuário filtrar posts em tempo real por palavra-chave, procurando tanto no título quanto no corpo do conteúdo.
+- **Consumo de API**: A aplicação faz uma requisição eficiente à API do TabNews para obter os posts mais recentes.
+- **Design Responsivo**: O layout se adapta a diferentes tamanhos de tela (desktop, tablet, celular) graças ao Tailwind CSS.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Features Futuras
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Para que a aplicação se torne uma newsletter completa e robusta, as seguintes funcionalidades estão planejadas para futuras iterações:
+
+### 1. Paginação e Carregamento Infinito
+Adicionar um sistema de paginação ou `infinite scroll` para permitir que o usuário explore todos os posts disponíveis, carregando mais conteúdos da API conforme avança na página.
+
+### 2. Filtro e Ordenação Avançada
+Adicionar opções de filtro por categoria (`Relevantes`, `Recentes`) e ordenação por critérios como número de visualizações, comentários ou data de publicação.
+
+### 3. Exibição de Conteúdo
+Em vez de redirecionar o usuário, criar uma rota dinâmica (`/posts/[slug]`) que exiba o conteúdo completo de um post dentro da própria aplicação.
+
+### 4. Salvar Posts Favoritos
+Permitir que os usuários salvem posts de interesse. Essa funcionalidade poderia utilizar o `localStorage` para persistência de dados.
+
+### 5. Formulário de Inscrição
+Implementar um formulário para coletar endereços de e-mail e integrá-lo a um serviço de newsletter (como o Mailchimp ou Mailjet), permitindo que os usuários recebam atualizações por e-mail.
+
+---
+
+Ao clonar o projeto para o seu repositório, não se esqueça de substituir o `https://www.dio.me/articles/enviando-seu-projeto-para-o-github` pelo endereço correto do GitHub.
+
+Com esta documentação, o seu projeto fica mais profissional e fácil para outros desenvolvedores (ou para você mesmo no futuro) entenderem rapidamente o seu propósito e as próximas etapas.
+
+Podemos considerar este projeto finalizado, ou você gostaria de começar a implementar alguma das "Features Futuras"?
